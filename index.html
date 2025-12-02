@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananya Gutgutia | Graphic Design Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #EEDDCC;
+            --dark-color: #61483D;
+            --light-text: #F3F3F3;
+            --nav-active-color: #7A5B4D;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--dark-color);
+            scroll-behavior: smooth;
+            padding-top: 56px;
+        }
+
+
+        .custom-navbar {
+            background-color: var(--primary-bg);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-nav-link {
+            font-weight: 700;
+            color: var(--dark-color) !important;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .custom-nav-link.active,
+        .custom-nav-link:hover {
+            color: var(--nav-active-color) !important;
+            border-bottom: 2px solid var(--nav-active-color);
+            margin-bottom: -2px;
+        }
+
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 10vw, 8rem);
+            font-weight: 900;
+            line-height: 0.8;
+            letter-spacing: -3px;
+            color: var(--dark-color);
+            text-transform: uppercase;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 2.5rem);
+            font-weight: 700;
+            margin-top: 2rem;
+        }
+
+        #about {
+            min-height: 100vh;
+            padding: 80px 0;
+            background-color: var(--dark-color);
+            color: var(--light-text);
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .project-card {
+            background-color: var(--light-text);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+        }
+
+        /* Responsive images inside project cards */
+        .project-img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Smaller, centered image for project detail view (inside ratio box) */
+        .project-detail-img {
+            max-width: 60%; /* reduce size relative to container */
+            height: auto;
+            display: block;
+            margin: auto; /* center inside the ratio box */
+            object-fit: contain;
+            border-radius: 0.25rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+        }
+
+        .project-img-placeholder {
+            min-height: 400px;
+            background-color: var(--dark-color);
+            color: var(--light-text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .project-img-placeholder-light {
+            background-color: #D6C3B4;
+            color: var(--dark-color);
+        }
+
+        .project-title {
+            font-weight: 900;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #contact {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .thank-you-title {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-smooth-scroll="true" tabindex="0">
+
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar shadow-sm">
+        <div class="container">
+            <a class="navbar-brand custom-nav-link" href="#home" style="font-weight: 900;">AG</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="#work">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <p class="text-uppercase" style="font-weight: 700; letter-spacing: 5px;">Ananya Gutgutia</p>
+                <div class="mt-4">
+                    <h1 class="hero-title">Graphic</h1>
+                    <h1 class="hero-title">Design</h1>
+                    <h1 class="hero-title">Portfolio</h1>
+                </div>
+                <p class="hero-subtitle text-uppercase">Visual Communication Student</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container-fluid">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0 d-flex justify-content-center">
+                    <img src="images/profile.jpg" class="about-image" alt="Ananya Gutgutia profile">
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="display-5 mb-4 text-light" style="font-weight: 900;">About Me</h2>
+                    <p class="lead">I'm Ananya Gutgutia, a nineteen-year-old visual communication student from Chennai,
+                        currently studying in Mumbai. I see design as a way of observing, feeling, and translating the
+                        world around me. My work often explores themes of simplicity, sensitivity, and the quiet beauty
+                        tucked into everyday moments.</p>
+                    <p>I enjoy moving fluidly between mediums—digital, print, and tactile—each one giving me a different
+                        language to express ideas that feel both thoughtful and instinctive. I'm drawn to creating work
+                        that carries a sense of calmness, yet still leaves room for curiosity, play, and discovery.</p>
+                    <p class="fst-italic">At its core, my practice is about paying attention: to details, emotions, and
+                        the subtle interactions that shape how we experience the world. Design, for me, is a way of
+                        making those moments visible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="container section-padding">
+        <h2 class="display-5 mb-5 text-center" style="font-weight: 900;">Work & Projects</h2>
+
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <a href="#project1" class="text-decoration-none text-reset">
+                    <div class="project-card">
+                        <!-- <div class="project-img-placeholder project-img-placeholder-light">Project 1</div>  -->
+                        <img src="images/work1.jpg" alt="Stippling & Emotion" class="project-img img-fluid">
+                        <div class="p-4">
+                            <h3 class="project-title">Stippling & Emotion</h3>
+                            <p class="text-muted mb-0">Illustration / Ink</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="#project2" class="text-decoration-none text-reset">
+                    <div class="project-card">
+                        <!-- <div class="project-img-placeholder">Project 2</div> -->
+                         <img src="images/work2.jpg" alt="Repetition & Momentum" class="project-img img-fluid">
+                        <div class="p-4">
+                            <h3 class="project-title" style="color: var(--dark-color);">Repetition & Momentum</h3>
+                            <p class="text-muted mb-0">Typography / Print</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="#project3" class="text-decoration-none text-reset">
+                    <div class="project-card">
+                        <!-- <div class="project-img-placeholder project-img-placeholder-light">Project 3</div> -->
+                        <img src="images/work3.jpg" alt="Vision & Perception" class="project-img img-fluid">
+                        <div class="p-4">
+                            <h3 class="project-title">Vision & Perception</h3>
+                            <p class="text-muted mb-0">Digital Art / Blending</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="project1" class="container section-padding">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h3 class="project-title mb-4">Project 1: Stippling & Emotion</h3>
+                <p>This piece grew out of my interest in how small, repetitive marks can slowly build form and emotion.
+                    Working only with stippling, I spent a long time layering dots to shape the quiet contours of the
+                    feet, letting the drawing develop at its own pace.</p>
+                <p>The dripping ink wasn't part of my original plan, but it naturally emerged as I worked and began to
+                    feel like a meaningful element. For me, it suggests a mix of release and weight - something slowly
+                    slipping away yet still present.</p>
+                <a href="#work" class="btn btn-outline-secondary mt-3"
+                    style="color: var(--dark-color); border-color: var(--dark-color);">← Back to Overview</a>
+            </div>
+                <div class="col-lg-6">
+                <div class="ratio ratio-4x3 d-flex align-items-center justify-content-center">
+                    <img src="images/work1.jpg" alt="Project 1: Stippling & Emotion" class="project-detail-img">
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project2" class="container section-padding bg-light">
+        <div class="row flex-row-reverse">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h3 class="project-title mb-4">Project 2: Try Again</h3>
+                <p>This piece grew from my interest in how repetition can become both a visual language and an emotional
+                    one. I used a grid-based system and slowly increased the density of the word 'TRY' to create a sense
+                    of depth and momentum, almost like the viewer is being pulled forward.</p>
+                <p>The distortion and layering were intentional. It's built from many attempts, stacked again and again,
+                    until they finally form something larger, conveying a message of perseverance.</p>
+                <a href="#work" class="btn btn-outline-secondary mt-3"
+                    style="color: var(--dark-color); border-color: var(--dark-color);">← Back to Overview</a>
+            </div>
+            <div class="col-lg-6">
+
+                <div class="ratio ratio-4x3 d-flex align-items-center justify-content-center">
+                    <img src="images/work2.jpg" alt="Project 2: Try Again" class="project-detail-img img-shift-right">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="project3" class="container section-padding">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h3 class="project-title mb-4">Project 3: Vision & Perception</h3>
+                <p>I wanted to explore the idea of vision not just as sight, but as perception—the way we interpret,
+                    distort, and expand what we see. The floating eyeball became a symbol of that: detached, exposed,
+                    and hyper-aware.</p>
+                <p>I focused on creating a glossy, almost sci-fi texture to the eyeball, with exaggerated veins and
+                    color gradients. The cool purples and electric greens were chosen to give the piece a digital mood,
+                    contrasting with the organic form. For me, this artwork reflects my interest in blending realism
+                    with digital aesthetics.</p>
+                <a href="#work" class="btn btn-outline-secondary mt-3"
+                    style="color: var(--dark-color); border-color: var(--dark-color);">← Back to Overview</a>
+            </div>
+            <div class="col-lg-6">
+
+                <div class="ratio ratio-4x3 d-flex align-items-center justify-content-center">
+                    <img src="images/work3.JPG" alt="Project 3: Vision & Perception" class="project-detail-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="container-fluid py-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="thank-you-title">THANK YOU</h2>
+                <div class="lead">
+                    <p><a href="mailto:ananyagutgutia@gmail.com" class="text-decoration-none"
+                            style="color: var(--dark-color); font-weight: 700;">ananyagutgutia@gmail.com</a></p>
+                    <p><a href="tel:+919087171717" class="text-decoration-none"
+                            style="color: var(--dark-color); font-weight: 700;">+91-9087171717</a></p>
+                    <p><a href="https://www.linkedin.com/in/ananya-gutgutia" target="_blank"
+                            class="text-decoration-none"
+                            style="color: var(--dark-color); font-weight: 700;">www.linkedin.com/in/ananya-gutgutia</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
